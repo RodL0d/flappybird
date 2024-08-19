@@ -10,10 +10,7 @@ public class UIManager : MonoBehaviour
     TextMeshProUGUI pontos, pontFinal, record;
     GameObject gameOverWindow;
 
-    private void Start()
-    {
-        gameOverWindow.SetActive(false);
-    }
+
     public void updateScoreText()
     {
         // Atualiza o texto de `scoreText` com a pontuação atual do `GameManager`.
