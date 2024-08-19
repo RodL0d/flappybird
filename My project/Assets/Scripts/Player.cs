@@ -49,4 +49,6 @@ public class Player : MonoBehaviour
         // Chama o método `GameOver` no `UIManager` para exibir a tela de Game Over.
     }
 
+    
+
 }
