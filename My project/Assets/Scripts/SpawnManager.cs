@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -7,34 +7,29 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    float clock;
+    float clock = 3;
     float cooldown = 2.5f;
-
     
+
     public GameObject prefab;
 
-    void Start()
-    {
-        
-        Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
-    }
-    private void Update()
-    {
-        
+    
+
+    
 
 
 
-
-        void Update()
+    IEnumerable Update() 
+    { 
         {
-            if (clock <= 0)
-            {
-                clock -= Time.deltaTime;
-            }
-            else
-            {
-                clock = cooldown;
-            }
+           
+            float spawnX = 10f; 
+            float spawnY = Random.Range(-2f, 2f);
+
+            
+            Instantiate(prefab, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+
+            yield return new WaitForSeconds(5);
         }
 
         
