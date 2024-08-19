@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class UIManager : MonoBehaviour
         // Atualiza o texto de `recordText` com o recorde armazenado nas preferências do jogador.
         gameOverWindow.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void restart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Game");
     }
 
 }
