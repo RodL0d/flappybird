@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
-    int velocity = 5;
+    int velocity = 8;
 
    // ManagerUI managerUI
 
@@ -18,9 +18,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown("space"))
         {
-            rigidbody2D.AddForce(transform.up * velocity);
+            rigidbody2D.AddForce(transform.up * velocity, ForceMode2D.Impulse);
+            Debug.Log("spacooo");
         }
     }
 
